@@ -11,7 +11,7 @@ bash and uv helpers for bash and zsh. makes managing uv venvs less annoying.
 
 ## setup
 
-1.  save the script somewhere, like `~/.bash_uv_helpers.sh`.
+1.  save the helper script (`.bash_uv_helpers.sh` or `.zsh_uv_helpers.sh`) somewhere, like `~/.bash_uv_helpers.sh`.
 2.  edit the config at the top of the script:
     *   set `uv_cache_dir` to where you want uv's cache and the named venvs to live (important if `/home` is small).
     *   set `_uv_project_search_paths` to where you keep your code, so `uvls` can find project venvs.
@@ -21,6 +21,7 @@ bash and uv helpers for bash and zsh. makes managing uv venvs less annoying.
     if [ -f "${home}/.bash_uv_helpers.sh" ]; then
         . "${home}/.bash_uv_helpers.sh"
     fi
+    # or use the zsh script path if you saved that one
     ```
 4.  reload your shell: `source ~/.bashrc` or `source ~/.zshrc` (or just open a new terminal).
 
@@ -76,4 +77,3 @@ uvhelp
 ```
 
 that's pretty much it. tinker with the config at the top of the script file if needed.
-```
